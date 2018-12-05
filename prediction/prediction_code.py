@@ -4,7 +4,7 @@ import plotly
 import plotly.graph_objs as go
 from django.contrib.staticfiles.templatetags.staticfiles import static
 
-data1 = pd.read_excel(r'/Users/apurva/Google Drive/Visual Analytics/Project/Prediction/mysite/prediction/static/prediction/numeric_cleaned.xls')
+data1 = pd.read_excel(r'/opt/app-root/src/prediction/static/prediction/numeric_cleaned.xls')
 
 def plot1(form_data):
     data2 = data1[(data1['PropertyCity'] == int(form_data['city']))

@@ -2,6 +2,7 @@ from django.conf import settings
 from django.conf.urls import include, url
 from django.contrib import admin
 
+from prediction.views import index as prediction_index
 from welcome.views import index, health
 
 urlpatterns = [
@@ -12,7 +13,7 @@ urlpatterns = [
     url(r'^$', index),
     url(r'^health$', health),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^prediction/', include(prediction.urls)),
+    url(r'^prediction/', prediction_index),
 ]
 
 if settings.DEBUG:
