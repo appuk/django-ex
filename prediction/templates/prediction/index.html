@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'prediction/bootstrap.min.css' %}"/>
+</head>
+<body>
+  {{ message }}
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Submit"/>
+    </form>
+    {{ graph1 | safe }}
+    {{ graph2 | safe }}
+    {{ graph3 | safe }}
+    {{ graph4 | safe }}
+    {{ graph5 | safe }}
+
+</body>
+</html>
